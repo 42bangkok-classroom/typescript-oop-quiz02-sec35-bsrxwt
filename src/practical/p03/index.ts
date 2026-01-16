@@ -19,8 +19,8 @@ interface reComments{
 }
 export const mapPostWithCommentCount = async(): Promise<reComments[]> => {
     try{
-        const url1 = "";
-        const url2 = "";
+        const url1 = "https://jsonplaceholder.typicode.com/posts";
+        const url2 = "https://jsonplaceholder.typicode.com/comments";
         const resPosts = await axios.get<Posts[]>(url1);
         const resComments = await axios.get<Comments[]>(url2);
         const posts = resPosts.data;
