@@ -13,7 +13,7 @@ interface reComment{
 export const safeFetchComment = async(commentId:number): Promise<reComment | null> => {
 
     try{
-        const resComment = await axios.get<Comments>(`https://jsonplaceholder.typicode.com/comments/${commentId}`);
+        const resComment = await axios.get<Comments>(``);
         const {id,body} = resComment.data;
         return {id,body};
     }catch(error){
