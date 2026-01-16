@@ -9,7 +9,7 @@ interface Comment{
 interface CommentCounts {
   [key: number]:number;
 }
-export const countCommentsByPost = async(): Promise<CommentCounts> => {
+export const countCommentsByPost = async(): Promise<CommentCounts|null> => {
     try {
         const url = "https://jsonplaceholder.typicode.com/comments";
         const response = await axios.get<Comment[]>(url);
